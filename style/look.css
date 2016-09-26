@@ -1,0 +1,278 @@
+html, body {
+    margin: 0;
+}
+
+body {
+    font-family: Open Sans;
+}
+
+h1 {
+    text-align: center;
+    color: #65767c;
+}
+
+h1 img {
+    width: 200px;
+    vertical-align: middle;
+    height: 37px;
+    padding-bottom: 3px;
+}
+
+#container {
+    height: auto !important;
+    margin: 0 auto -4em;
+    width: 52%;
+    z-index: 1;
+}
+
+#container .logo-produna {
+    position: relative;
+}
+
+#container .logo-produna img {
+    width: 70px;
+}
+
+#title {
+    padding: 0 20px;
+}
+
+#title h1:before {
+    content: '';
+    background-image: url('../image/logo_anthracit.png');
+    position: fixed;
+    height: 46px;
+    background-size: 100% 100%;
+    width: 245px;
+    left: 20px;
+    top: 15px;
+}
+
+#quiz {
+    display: none;
+    color: #65767c;
+    padding-bottom: 15px;
+}
+
+#question {
+    padding: 0 20px;
+}
+
+#quiz #question p {
+    padding: 5px;
+    display: inline-block;
+}
+
+#quiz #question .help {
+    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: #9DC957;
+}
+
+#score {
+    padding: 0 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+button {
+    position: relative;
+    float: right;
+}
+
+.button {
+    border-radius: 5px;
+    width: 40px;
+    color: #525252;
+    padding: 5px 20px;
+    position: relative;
+    float: right;
+    border: 1px solid #9DC957;
+    margin: 0 2px 0 2px;
+    transition: .2s;
+}
+
+.button:hover {
+    background-color: rgb(188, 223, 74);
+    transition: .2s;
+    color: white;
+}
+
+.button a {
+    text-decoration: none;
+    color: black;
+}
+
+#next {
+    margin-left: 20px;
+    margin-right: 26px;
+}
+
+#prev {
+    display: none;
+}
+
+#start {
+    display: none;
+    width: 90px;
+}
+
+#footer {
+    max-width: 100%;
+    background: url('../image/footer.png');
+    height: 309px;
+    background-position: center center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.overlay-div {
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 200px;
+    margin-left: -200px;
+    margin-top: -130px;
+    background-color: rgb(231, 231, 231);
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+.overlay-div h1 {
+    font-size: 1.8em;
+}
+
+.overlay-div .button {
+    float: none;
+    position: relative;
+    width: 55px;
+    margin: 0 auto;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1030px) {
+    #title h1 {
+        position: relative;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 979px) {
+    #container {
+        width: 100%;
+    }
+}
+
+/* --------------------------- Table -----------------------------*/
+table {
+    width: 100%;
+}
+
+table tr td {
+    display: block;
+    position: relative;
+    padding: 10px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    border-radius: 2px;
+    margin: 5px;
+}
+
+/* ---------------------------- checkBox ----------------------- */
+input[type=checkbox].css-checkbox {
+    z-index: -1000;
+    left: -1000px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 0px;
+    width: 1px;
+    margin-left: 25px;
+    padding: 0;
+    border: 0;
+    visibility: hidden;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+    padding-left: 35px;
+    height: 30px;
+    display: inline-block;
+    line-height: 30px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 30px;
+    vertical-align: middle;
+    cursor: pointer;
+    position: absolute;
+    left: 0;
+
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+    background-position: 0 -30px;
+}
+
+label.css-label {
+    background-image: url('../image/csscheckbox.png');
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* -------------------------- radiobutton ---------------------- */
+.roundedOne input[type=radio]:not(old) {
+    width: 2em;
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    opacity: 0;
+}
+
+.roundedOne input[type=radio   ]:not(old) + label {
+    position: absolute;
+    left: 0;
+    cursor: pointer;
+}
+
+.roundedOne input[type=radio   ]:not(old) + label > span {
+    display: inline-block;
+    width: 1.6em;
+    height: 1.6em;
+    margin: -0.2em 0.5em 0.25em -0.1em;
+    border: 0.09em solid rgb(153, 204, 102);
+    border-radius: 1em;
+    vertical-align: bottom;
+}
+
+.roundedOne input[type=radio   ]:not(old):checked + label > span {
+    border: 0.09em solid rgb(115, 153, 77);
+}
+
+.roundedOne input[type=radio]:not(old):checked + label > span > span {
+    display: block;
+    width: 1em;
+    height: 1em;
+    margin: 0.25em;
+    border: 0.0625em solid rgb(115, 153, 77);
+    border-radius: 1em;
+    background: rgb(153, 204, 102);
+    background-image: -moz-linear-gradient(rgb(179, 217, 140), rgb(153, 204, 102));
+    background-image: -ms-linear-gradient(rgb(179, 217, 140), rgb(153, 204, 102));
+    background-image: -o-linear-gradient(rgb(179, 217, 140), rgb(153, 204, 102));
+    background-image: -webkit-linear-gradient(rgb(179, 217, 140), rgb(153, 204, 102));
+    background-image: linear-gradient(rgb(179, 217, 140), rgb(153, 204, 102));
+}
